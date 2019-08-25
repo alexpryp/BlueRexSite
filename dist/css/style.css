@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif; }
+
+header {
+  background-image: url(../../images/header/headerBgImg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff; }
+  header nav {
+    margin: 0;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 160px; }
+  header .logo, header .navMenu, header .menuWrapper, header .gamburgerMenu {
+    display: flex;
+    align-items: center; }
+  header .logo img {
+    padding-right: 10px; }
+  header .name-company {
+    font-size: 3.4rem;
+    line-height: 3.5rem; }
+  header .navMenu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; }
+    header .navMenu ul li {
+      float: left;
+      margin: 0 20px; }
+      header .navMenu ul li a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.45rem; }
+  header .gamburgerMenu {
+    margin-left: 50px; }
+  header .head-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1500px;
+    margin: 0 auto;
+    height: 780px;
+    background-image: url(../../images/header/man.png);
+    background-repeat: no-repeat;
+    background-position: right; }
+    header .head-content-wrapper .head-content {
+      max-width: 750px; }
+      header .head-content-wrapper .head-content h2 {
+        font-size: 3.4rem;
+        line-height: 3.5rem;
+        font-family: serif;
+        font-style: italic;
+        font-weight: normal; }
+      header .head-content-wrapper .head-content h1 {
+        font-size: 4.5rem;
+        font-weight: normal; }
+      header .head-content-wrapper .head-content p {
+        font-size: 1.5rem;
+        line-height: 2.5rem; }
