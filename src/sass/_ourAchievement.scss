@@ -1,0 +1,36 @@
+.our-achievement {
+	display: flex;
+	align-items: stretch;
+	min-height: 510px;
+	background-color: $purpleButton;
+	&-container {
+		display: flex;
+		align-items: stretch;
+		min-height: 510px;
+		margin: auto;
+		max-width: $contentContainerMaxWidth;
+		.achiev, .achievCenter {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			flex-grow: 1;
+			.image {
+				text-align: center;
+			}
+			.val {
+				font-size: 4.17rem;
+				font-weight: bold;
+				text-align: center;
+				margin: 20px 0;
+			}
+			.achiev-name {
+				font-size: 2.5rem;
+				text-align: center;
+				margin: 20px 0;
+			}
+		}
+		.achievCenter {
+			background-color: $purpleButtonHover;
+		}
+	}
+}

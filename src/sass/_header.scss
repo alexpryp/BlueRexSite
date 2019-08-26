@@ -1,19 +1,14 @@
 header {
-	//display: flex;
-	//flex-direction: column;
-	//justify-content: space-between;
-	//align-items: stretch;
-	//min-height: 946px;
-	background-image: url(../../images/header/headerBgImg.png);
+	background-image: url(../../images/header/headerBgImg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	color: $mainTextColor;
 	nav {
-		margin: 0;
+		max-width: 1800px;
+		margin: 0 auto;
 		padding: 0 100px;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 		min-height: 160px;
 	}
 
@@ -23,10 +18,19 @@ header {
 	}
 
 	.logo {
+		flex-grow: 1;
 		img {
 			padding-right: 10px;			
 		}
 
+	}
+	.menuWrapper {
+		flex-grow: 1;
+		justify-content: flex-end;
+
+		.gamburgerMenu {
+			margin-left: 50px;
+		}
 	}
 	.name-company {
 		font-size: 3.4rem;
@@ -44,11 +48,17 @@ header {
 				color: $mainTextColor;
 				text-align: center;
 				text-decoration: none;
-				font-size: 1.45rem			}
+				font-size: 1.45rem;
+				cursor: pointer;
+				border-bottom: 5px solid rgba(256, 256, 256, 0);
+				&[href="#home"] {
+					border-bottom: 5px solid rgba(256, 256, 256, 1);
+				}			
+			}
+			a:hover {
+				border-bottom: 5px solid $mainTextColor;
+			}
 		}
-	}
-	.gamburgerMenu {
-		margin-left: 50px;
 	}
 	.head-content-wrapper {
 		display: flex;
@@ -78,6 +88,10 @@ header {
 			p {
 				font-size: 1.5rem;
 				line-height: 2.5rem;
+			}
+			&-buttons {
+				display: flex;
+				justify-content: center;
 			}
 		}
 	}

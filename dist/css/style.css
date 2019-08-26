@@ -1,26 +1,78 @@
+:root {
+  font-size: 16px; }
+
 * {
   box-sizing: border-box; }
 
 body {
-  font-family: Arial, sans-serif; }
+  font-family: Arial, sans-serif;
+  color: #fff; }
+
+.button {
+  display: inline-block;
+  text-transform: uppercase;
+  border: none;
+  margin: 30px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 30px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5); }
+  .button-oval-pink {
+    background-color: #f42267; }
+  .button-oval-pink:hover {
+    background-color: #9F0B3D; }
+  .button-oval-purple {
+    background-color: #5f3fb8; }
+  .button-oval-purple:hover {
+    background-color: #2F1478; }
+
+.button-square {
+  display: inline-block;
+  text-transform: uppercase;
+  border: none;
+  margin: 30px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px; }
+  .button-square-oval-pink {
+    background-color: #f42267;
+    box-shadow: 3px 3px 0px 3px #9F0B3D; }
+  .button-square-oval-pink:hover {
+    box-shadow: none;
+    position: relative;
+    left: 6px;
+    top: 6px; }
 
 header {
-  background-image: url(../../images/header/headerBgImg.png);
+  background-image: url(../../images/header/headerBgImg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  color: #fff; }
+  background-position: center; }
   header nav {
-    margin: 0;
+    max-width: 1800px;
+    margin: 0 auto;
     padding: 0 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     min-height: 160px; }
   header .logo, header .navMenu, header .menuWrapper, header .gamburgerMenu {
     display: flex;
     align-items: center; }
-  header .logo img {
-    padding-right: 10px; }
+  header .logo {
+    flex-grow: 1; }
+    header .logo img {
+      padding-right: 10px; }
+  header .menuWrapper {
+    flex-grow: 1;
+    justify-content: flex-end; }
+    header .menuWrapper .gamburgerMenu {
+      margin-left: 50px; }
   header .name-company {
     font-size: 3.4rem;
     line-height: 3.5rem; }
@@ -36,9 +88,13 @@ header {
         color: #fff;
         text-align: center;
         text-decoration: none;
-        font-size: 1.45rem; }
-  header .gamburgerMenu {
-    margin-left: 50px; }
+        font-size: 1.45rem;
+        cursor: pointer;
+        border-bottom: 5px solid rgba(255, 255, 255, 0); }
+        header .navMenu ul li a[href="#home"] {
+          border-bottom: 5px solid white; }
+      header .navMenu ul li a:hover {
+        border-bottom: 5px solid #fff; }
   header .head-content-wrapper {
     display: flex;
     justify-content: space-between;
@@ -63,3 +119,66 @@ header {
       header .head-content-wrapper .head-content p {
         font-size: 1.5rem;
         line-height: 2.5rem; }
+      header .head-content-wrapper .head-content-buttons {
+        display: flex;
+        justify-content: center; }
+
+.about-company {
+  min-height: 660px;
+  background-image: url(../../images/aboutCompany/WorldMap.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #000; }
+  .about-company-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 1200px; }
+    .about-company-container-content {
+      flex-grow: 1; }
+      .about-company-container-content p {
+        line-height: 2rem; }
+    .about-company-container h3 {
+      font-size: 2.76rem;
+      font-family: serif;
+      font-style: italic;
+      font-weight: normal; }
+    .about-company-container h2 {
+      font-size: 4.17rem;
+      font-weight: normal;
+      margin: 0px; }
+    .about-company-container-illustration {
+      flex-grow: 1; }
+      .about-company-container-illustration img {
+        margin-top: 50px; }
+
+.our-achievement {
+  display: flex;
+  align-items: stretch;
+  min-height: 510px;
+  background-color: #5f3fb8; }
+  .our-achievement-container {
+    display: flex;
+    align-items: stretch;
+    min-height: 510px;
+    margin: auto;
+    max-width: 1200px; }
+    .our-achievement-container .achiev, .our-achievement-container .achievCenter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1; }
+      .our-achievement-container .achiev .image, .our-achievement-container .achievCenter .image {
+        text-align: center; }
+      .our-achievement-container .achiev .val, .our-achievement-container .achievCenter .val {
+        font-size: 4.17rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 20px 0; }
+      .our-achievement-container .achiev .achiev-name, .our-achievement-container .achievCenter .achiev-name {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 20px 0; }
+    .our-achievement-container .achievCenter {
+      background-color: #2F1478; }

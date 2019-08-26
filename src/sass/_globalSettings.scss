@@ -1,4 +1,13 @@
 $mainTextColor: #fff;
+$pinkButton: #f42267;
+$pinkButtonHover: #9F0B3D	;
+$purpleButton: #5f3fb8;
+$purpleButtonHover: #2F1478;
+$contentContainerMaxWidth: 1200px;
+
+:root {
+	font-size: 16px;
+}
 
 * {
 	box-sizing: border-box;
@@ -6,4 +15,54 @@ $mainTextColor: #fff;
 
 body {
 	font-family: Arial, sans-serif;
+	color: $mainTextColor;
+}
+
+.button {
+	display: inline-block;
+	text-transform: uppercase;
+	border: none;
+	margin: 30px;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	color: $mainTextColor;
+	border-radius: 30px;
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5 );
+	&-oval-pink {
+		background-color: $pinkButton;
+	}
+	&-oval-pink:hover {
+		background-color: $pinkButtonHover;
+	}
+	&-oval-purple {
+		background-color: $purpleButton;
+	}
+	&-oval-purple:hover {
+		background-color: $purpleButtonHover;
+	}
+}
+
+.button-square {
+	display: inline-block;
+	text-transform: uppercase;
+	border: none;
+	margin: 30px;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	color: $mainTextColor;
+	border-radius: 5px;
+	&-oval-pink {
+		background-color: $pinkButton;
+		box-shadow: 3px 3px 0px 3px $pinkButtonHover;
+	}
+	&-oval-pink:hover {
+		box-shadow: none;
+		position: relative;
+		left: 6px;
+		top: 6px;
+	}
 }
