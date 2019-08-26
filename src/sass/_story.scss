@@ -1,0 +1,28 @@
+.story {
+	display: flex;
+	justify-content: center;
+	background-image: url(../../images/story/bgStorySection.jpg);
+	min-height: 520px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	&-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: $contentContainerMaxWidth;
+		h2, h3, p {
+			text-align: center;
+		}
+		h2, h3 {
+			font-size: 4.17rem;
+			margin: 20px 0;
+		}
+		h2 {
+			font-family: serif;
+			font-style: italic;
+			font-weight: normal;
+		}
+	}
+}

@@ -168,17 +168,38 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      flex-grow: 1; }
-      .our-achievement-container .achiev .image, .our-achievement-container .achievCenter .image {
-        text-align: center; }
+      flex-grow: 1;
+      padding: 10px;
+      text-align: center; }
       .our-achievement-container .achiev .val, .our-achievement-container .achievCenter .val {
         font-size: 4.17rem;
         font-weight: bold;
-        text-align: center;
         margin: 20px 0; }
       .our-achievement-container .achiev .achiev-name, .our-achievement-container .achievCenter .achiev-name {
         font-size: 2.5rem;
-        text-align: center;
         margin: 20px 0; }
     .our-achievement-container .achievCenter {
       background-color: #2F1478; }
+
+.story {
+  display: flex;
+  justify-content: center;
+  background-image: url(../../images/story/bgStorySection.jpg);
+  min-height: 520px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .story-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px; }
+    .story-container h2, .story-container h3, .story-container p {
+      text-align: center; }
+    .story-container h2, .story-container h3 {
+      font-size: 4.17rem;
+      margin: 20px 0; }
+    .story-container h2 {
+      font-family: serif;
+      font-style: italic;
+      font-weight: normal; }
