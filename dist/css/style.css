@@ -25,7 +25,7 @@ body {
   .button-oval-pink:hover {
     background-color: #9F0B3D; }
   .button-oval-purple {
-    background-color: #5f3fb8; }
+    background-color: #4b2d7f; }
   .button-oval-purple:hover {
     background-color: #2F1478; }
 
@@ -157,7 +157,7 @@ header {
   display: flex;
   align-items: stretch;
   min-height: 510px;
-  background-color: #5f3fb8; }
+  background-color: #4b2d7f; }
   .our-achievement-container {
     display: flex;
     align-items: stretch;
@@ -296,3 +296,18 @@ header {
         .our-work .our-work-container .our-work-container-works .work-img img {
           border: 0px solid #fff;
           border-radius: 5px; }
+
+.our-client {
+  display: flex;
+  justify-content: center;
+  min-height: 440px;
+  background-color: #4b2d7f; }
+  .our-client .our-client-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 1200px; }
+    .our-client .our-client-container .client {
+      display: flex;
+      flex-basis: 25%;
+      justify-content: center;
+      align-items: center; }
