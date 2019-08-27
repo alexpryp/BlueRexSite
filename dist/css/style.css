@@ -42,11 +42,11 @@ body {
   border-radius: 5px; }
   .button-square-oval-pink {
     background-color: #f42267;
-    box-shadow: 3px 3px 0px 3px #9F0B3D; }
+    box-shadow: 0px 3px 0px 3px #9F0B3D; }
   .button-square-oval-pink:hover {
     box-shadow: none;
     position: relative;
-    left: 6px;
+    left: 0px;
     top: 6px; }
 
 header {
@@ -203,3 +203,96 @@ header {
       font-family: serif;
       font-style: italic;
       font-weight: normal; }
+
+.our-services {
+  display: flex;
+  justify-content: center;
+  min-height: 850px;
+  color: #000; }
+  .our-services-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px; }
+    .our-services-container-info {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%;
+      flex-grow: 1;
+      justify-content: center;
+      padding: 10px; }
+      .our-services-container-info h3 {
+        font-size: 2rem;
+        font-family: serif;
+        font-style: italic;
+        font-weight: normal;
+        margin: 10px; }
+      .our-services-container-info h2 {
+        font-size: 3rem;
+        margin: 10px; }
+      .our-services-container-info p {
+        font-size: 1.2rem;
+        margin: 10px; }
+      .our-services-container-info .design-directions {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        margin-top: 100px; }
+        .our-services-container-info .design-directions .desHead {
+          font-size: 1.5rem;
+          font-weight: bold; }
+        .our-services-container-info .design-directions .graphic-design, .our-services-container-info .design-directions .web-design {
+          flex-basis: 50%; }
+    .our-services-container-video {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 50%;
+      flex-grow: 1;
+      text-align: center; }
+      .our-services-container-video div {
+        position: relative; }
+        .our-services-container-video div .circle {
+          position: absolute;
+          top: 181px;
+          left: 228.5px;
+          width: 100px;
+          height: 100px;
+          border-radius: 100%;
+          background-color: #f42267;
+          z-index: 100; }
+          .our-services-container-video div .circle .play {
+            position: absolute;
+            z-index: 200;
+            left: 35px;
+            top: 29.5px; }
+        .our-services-container-video div .circle:hover {
+          background-color: #9F0B3D;
+          cursor: pointer; }
+
+.our-work {
+  display: flex;
+  justify-content: center;
+  color: #000;
+  background-color: #f1f1f1; }
+  .our-work .our-work-container {
+    max-width: 1200px; }
+    .our-work .our-work-container p {
+      text-align: center;
+      margin-bottom: 60px; }
+    .our-work .our-work-container .our-work-container-info {
+      text-align: center; }
+      .our-work .our-work-container .our-work-container-info h2 {
+        font-size: 3rem;
+        margin-top: 60px; }
+      .our-work .our-work-container .our-work-container-info p {
+        font-size: 1.2rem;
+        margin: 10px; }
+    .our-work .our-work-container .our-work-container-works {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 40px 0; }
+      .our-work .our-work-container .our-work-container-works .work-img {
+        padding: 10px; }
+        .our-work .our-work-container .our-work-container-works .work-img img {
+          border: 0px solid #fff;
+          border-radius: 5px; }

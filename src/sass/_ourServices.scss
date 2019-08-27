@@ -1,0 +1,80 @@
+.our-services {
+	display: flex;
+	justify-content: center;
+	min-height: 850px;
+	color: #000;
+
+	&-container {
+		display: flex;
+		justify-content: center;
+		max-width: $contentContainerMaxWidth;
+		&-info {
+			display: flex;
+			flex-direction: column;
+			flex-basis: 50%;
+			flex-grow: 1;
+			justify-content: center;
+			padding: 10px;
+			//text-align: center;
+			h3 {
+				font-size: 2rem;
+				font-family: serif;
+				font-style: italic;
+				font-weight: normal;
+				margin: 10px;
+			}
+			h2 {
+				font-size: 3rem;
+				margin: 10px
+			}
+			p {
+				font-size: 1.2rem;
+				margin: 10px;
+			}
+			.design-directions {
+				display: flex;
+				justify-content: space-around;
+				padding: 10px;
+				margin-top: 100px;
+				.desHead {
+					font-size: 1.5rem;
+					font-weight: bold;
+				}
+				.graphic-design, .web-design {
+					flex-basis: 50%;
+				}
+			}
+		}
+		&-video {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-basis: 50%;
+			flex-grow: 1;
+			text-align: center;
+			div {
+				position: relative;
+				.circle {
+					position: absolute;
+					top: 181px;
+					left: 228.5px;
+					width: 100px;
+					height: 100px;
+					border-radius: 100%;
+					background-color: $pinkButton;
+					z-index: 100;
+					.play {
+						position: absolute;
+						z-index: 200;
+						left: 35px;
+						top: 29.5px;
+					}
+				}
+				.circle:hover {
+					background-color: $pinkButtonHover;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

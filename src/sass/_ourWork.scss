@@ -1,0 +1,39 @@
+.our-work {
+	display: flex;
+	justify-content: center;
+	color: #000;
+	background-color: #f1f1f1;
+
+	.our-work-container {
+		max-width: $contentContainerMaxWidth;
+
+		p {
+			text-align: center;
+			margin-bottom: 60px;
+		}
+		.our-work-container-info {
+			text-align: center;
+			h2 {
+				font-size: 3rem;
+				margin-top: 60px;
+			}
+			p {
+				font-size: 1.2rem;
+				margin: 10px
+			}
+		}
+
+		.our-work-container-works {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 40px 0;
+			.work-img {
+				padding: 10px;
+				img {
+					border: 0px solid #fff;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+}

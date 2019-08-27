@@ -57,12 +57,12 @@ body {
 	border-radius: 5px;
 	&-oval-pink {
 		background-color: $pinkButton;
-		box-shadow: 3px 3px 0px 3px $pinkButtonHover;
+		box-shadow: 0px 3px 0px 3px $pinkButtonHover;
 	}
 	&-oval-pink:hover {
 		box-shadow: none;
 		position: relative;
-		left: 6px;
+		left: 0px;
 		top: 6px;
 	}
 }
