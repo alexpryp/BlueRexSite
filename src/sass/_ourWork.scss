@@ -28,11 +28,19 @@
 			flex-wrap: wrap;
 			margin: 40px 0;
 			.work-img {
-				padding: 10px;
+				margin: 10px;
+				overflow: hidden;
+				border-radius: 5px;
 				img {
 					border: 0px solid #fff;
-					border-radius: 5px;
 				}
+				
+				img:hover {
+					transition: 0.25s ease;
+					transform: scale(1.1) transLateY(-0.0px);
+					cursor: pointer;
+				}
+				
 			}
 		}
 	}

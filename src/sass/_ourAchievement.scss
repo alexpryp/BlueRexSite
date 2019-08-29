@@ -28,6 +28,10 @@
 				margin: 20px 0;
 			}
 		}
+		.achiev:hover, .achievCenter:hover {
+			background-color: $pinkButtonHover;
+			cursor: pointer;
+		}
 		.achievCenter {
 			background-color: $purpleButtonHover;
 		}
