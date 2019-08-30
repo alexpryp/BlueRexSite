@@ -1,0 +1,13 @@
+footer {
+	display: flex;
+	justify-content: center;
+	min-height: 127px;
+	background-color: #f6f6f6;
+
+	.footer-container {
+		display: flex;
+		align-items: center;
+		max-width: $contentContainerMaxWidth;
+		color: #000;
+	}
+}

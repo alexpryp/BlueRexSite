@@ -1,0 +1,66 @@
+.quickLinks {
+	display: flex;
+	justify-content: center;
+	min-height: 680px;
+	background-image: url(../../images/aboutCompany/WorldMap.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: #000;
+
+	&-container {
+		display: flex;
+		align-items: center;
+		max-width: $contentContainerMaxWidth;
+		align-items: stretch;
+
+		.links {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			align-content: center;
+			flex-basis: 50%;
+
+			div {
+				flex-basis: 50%;
+				
+				h2 {
+					color: $purpleButton;
+				}
+
+				ul {
+					list-style: none;
+
+					a {
+						text-decoration: none;
+						color: #000;
+					}
+					a:hover {
+						color: $purpleButton;
+					}
+				}
+			}
+		}
+
+		.photos {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			align-content: center;
+			flex-basis: 50%;
+			
+			.photo {
+				margin: 5px;
+				border: 0px solid #000;
+				border-radius: 20px;
+				overflow: hidden;
+
+				img:hover {
+					transition: 0.25s ease;
+					transform: scale(1.1) transLateY(-0.0px);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

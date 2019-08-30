@@ -1,0 +1,38 @@
+.socialML {
+	display: flex;
+	justify-content: center;
+	min-height: 190px;
+	background-color: #4b2d7f;
+	&-container {
+		display: flex;
+		align-items: center;
+		max-width: $contentContainerMaxWidth;
+
+		ul {
+			list-style: none;
+			display: flex;
+			justify-content: center;
+
+			li {
+				margin: 20px;
+				font-size: 1.3rem;
+
+				a {
+					display: block;
+					color: $mainTextColor;
+					text-align: center;
+					text-decoration: none;
+					cursor: pointer;
+					border-bottom: 3px solid rgba(256, 256, 256, 0);
+				}
+				a:hover {
+					border-bottom: 3px solid $mainTextColor;
+				}
+
+				.divider {
+					color: #a57ee9;
+				}
+			}
+		}
+	}
+}
