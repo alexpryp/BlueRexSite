@@ -7,7 +7,7 @@
 	background-size: cover;
 	background-position: center;
 
-	.need-help-container {
+	&-container {
 		max-width: $contentContainerMaxWidth;
 		display: flex;
 		flex-direction: column;
@@ -59,6 +59,17 @@
 					left: 0px;
 					top: 6px;
 				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	.need-help {
+		&-container {
+			.form form {
+				flex-wrap: wrap;
 			}
 		}
 	}

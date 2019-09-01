@@ -16,7 +16,7 @@ function styles() {
 		            overrideBrowserlist: ['> 1%'],
 		            cascade: false
 		        }))
-		        .pipe(cssmin())
+				.pipe(cssmin())
 				.pipe(gulp.dest('./dist/css')); //сохраняем обработанные файлы
 }
 

@@ -6,12 +6,13 @@
 	.our-client-container {
 		display: flex;
 		flex-wrap: wrap;
-		min-width: $contentContainerMaxWidth;
+		max-width: $contentContainerMaxWidth;
 		.client {
 			display: flex;
 			flex-basis: 25%;
 			justify-content: center;
 			align-items: center;
+			padding: 5px;
 		}
 	}
 }

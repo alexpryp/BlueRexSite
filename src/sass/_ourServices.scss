@@ -41,7 +41,7 @@
 					font-weight: bold;
 				}
 				.graphic-design, .web-design {
-					flex-basis: 50%;
+					//flex-basis: 50%;
 				}
 			}
 		}
@@ -74,6 +74,33 @@
 					background-color: $pinkButtonHover;
 					cursor: pointer;
 				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1000px) {
+	.our-services {
+		&-container {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.our-services {
+		&-container {
+			&-info {
+				.design-directions {
+					flex-wrap: wrap;
+					.graphic-design, .web-design {
+						//flex-basis: auto;
+					}
+				}
+			}
+			&-video {
+				display: none;
 			}
 		}
 	}

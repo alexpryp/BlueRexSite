@@ -37,3 +37,11 @@
 		}
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.our-achievement {
+		&-container {
+			flex-wrap: wrap;
+		}
+	}
+}

@@ -29,7 +29,42 @@ header {
 		justify-content: flex-end;
 
 		.gamburgerMenu {
+			position: relative;
+			display: inline-block;
 			margin-left: 50px;
+
+			.gamburgerMenu-wrapper {
+				position: relative;
+				display: block;
+				height: 50px;
+				width: 50px;
+				cursor: pointer;
+			}
+
+			.navigMenu {
+				display: block;
+				width: 160px;
+				right: 0px;
+				padding: 0px;
+				position: absolute;
+				background-color: rgba(0, 0, 0, .5);
+				z-index: 100;
+				overflow: hidden;
+				transition: 0.5s;
+
+				a {
+					text-align: center;
+					color: $mainTextColor;
+					padding: 7px 11px;
+					text-decoration: none;
+					display: block;
+					border: 5px solid rgba(256, 256, 256, 0);
+				}
+
+				a:hover {
+					border: 5px solid rgba(256, 256, 256, 1);
+				}
+			}
 		}
 	}
 	.name-company {
@@ -65,11 +100,12 @@ header {
 		justify-content: space-between;
 		align-items: center;
 		width: 1500px;
+		padding: 10px;
 		margin: 0 auto;
 		height: 780px;
 		background-image: url(../../images/header/man.png);
 		background-repeat: no-repeat;
-		background-position: right;
+		background-position: bottom right;
 
 		.head-content {
 			
@@ -93,6 +129,131 @@ header {
 				display: flex;
 				justify-content: center;
 			}
+		}
+	}
+}
+
+
+
+.hide-menu {
+	height: 0;
+	font-size: 0px;
+}
+
+.show-menu {
+	height: 390px;
+	font-size: 1.45rem;
+	transform: translateX(0%);
+}
+
+.burger-line {
+	position: absolute;
+	right: 12px;
+	width: 35px;
+	height: 5px;
+	background-color: #fff;
+	transition: 0.5s;
+}
+
+.first {
+	top: 8px;
+}
+
+.first-active {
+	display: none;
+}
+
+.second, .third {
+	top: 18px;
+}
+
+.second-active {
+	transform: rotate(45deg);
+}
+
+.third-active {
+	transform: rotate(-45deg);
+}
+
+.fourth {
+	top: 28px;
+}
+
+.fourth-active {
+	display: none;
+}
+
+
+// Media queries
+@media screen and (max-width: 1500px) {
+	header {
+		.head-content-wrapper {
+			width: 1400px;
+			background-size: 50%;
+
+			.head-content {
+				max-width: 650px;
+
+				h2 {
+					font-size: 3rem;
+					line-height: 3.1rem;
+					font-family: serif;
+					font-style: italic;
+					font-weight: normal;
+				}
+				h1 {
+					font-size: 4rem;
+					font-weight: normal;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1400px) {
+	header {
+		nav {
+			max-width: 1400px;
+			margin: 0 auto;
+			padding: 0 10px;
+			display: flex;
+			justify-content: flex-end;
+			min-height: 160px;
+		}
+
+		.head-content-wrapper {
+			width: 1200px;
+			background-size: 50%;
+
+			.head-content {
+				max-width: 650px;
+
+				h2 {
+					font-size: 3rem;
+					line-height: 3.1rem;
+					font-family: serif;
+					font-style: italic;
+					font-weight: normal;
+				}
+				h1 {
+					font-size: 4rem;
+					font-weight: normal;
+				}
+			}
+		}
+	}	
+}
+
+
+@media screen and (max-width: 1225px) {
+	header {
+		.navMenu {
+			display: none;
+		}
+		.head-content-wrapper {
+			width: auto;
+			background-image: none;
 		}
 	}
 }

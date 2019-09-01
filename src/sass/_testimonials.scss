@@ -7,7 +7,7 @@
 	background-size: cover;
 	background-position: center;
 
-	.testimonials-container {
+	&-container {
 		max-width: $contentContainerMaxWidth;
 		display: flex;
 		justify-content: center;
@@ -73,6 +73,18 @@
 
 			&-container {
 
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	.testimonials {
+		&-container {
+			flex-wrap: wrap;
+			.testimonial, .client-photo {
+				flex-basis: 100%;
 			}
 		}
 	}
