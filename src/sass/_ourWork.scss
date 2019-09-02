@@ -4,14 +4,14 @@
 	color: #000;
 	background-color: #f1f1f1;
 
-	.our-work-container {
+	&-container {
 		max-width: $contentContainerMaxWidth;
 
 		p {
 			text-align: center;
 			margin-bottom: 60px;
 		}
-		.our-work-container-info {
+		&-info {
 			text-align: center;
 			h2 {
 				font-size: 3rem;
@@ -23,10 +23,11 @@
 			}
 		}
 
-		.our-work-container-works {
+		&-works {
 			display: flex;
 			flex-wrap: wrap;
 			margin: 40px 0;
+			justify-content: space-around;
 			.work-img {
 				margin: 10px;
 				overflow: hidden;
@@ -41,6 +42,21 @@
 					cursor: pointer;
 				}
 				
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 400px) {
+	.our-work {
+		&-container {
+			&-works {
+				.work-img {
+					img {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}

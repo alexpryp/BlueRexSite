@@ -12,8 +12,12 @@
 		max-width: $contentContainerMaxWidth;
 		&-content {
 			flex-grow: 1;
+			padding: 5px;
 			p {
 				line-height: 2rem;
+			}
+			.ref {
+				text-align: center;
 			}
 		}
 		h3 {
@@ -28,6 +32,7 @@
 			margin: 0px;
 		}
 		&-illustration {
+			display: flex;
 			flex-grow: 1;
 			img {
 				margin-top: 50px;
@@ -38,6 +43,24 @@
 
 
 @media screen and (max-width: 1000px) {
+	.about-company {
+		&-container {
+			flex-wrap: wrap;
+			&-content {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				order: 2;
+			}
+			&-illustration {
+				justify-content: center;
+				order: 1;
+			}
+		}
+	}	
+}
+
+@media screen and (max-width: 450px) {
 	.about-company {
 		&-container {
 			&-illustration {

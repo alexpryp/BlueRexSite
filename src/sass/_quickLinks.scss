@@ -64,3 +64,20 @@
 		}
 	}
 }
+
+
+
+@media screen and (max-width: 450px) {
+	.quickLinks {
+		&-container {
+			flex-wrap: wrap;
+			.links {
+				flex-basis: 100%;
+			}
+			.photos {
+				flex-basis: 100%;
+				justify-content: center;
+			}
+		}
+	}
+}
