@@ -13,6 +13,8 @@
 		&-content {
 			flex-grow: 1;
 			padding: 5px;
+			transform: translate3d(-1000px, 0, 0);
+			opacity: 0;
 			p {
 				line-height: 2rem;
 			}
@@ -34,6 +36,8 @@
 		&-illustration {
 			display: flex;
 			flex-grow: 1;
+			transform: translate3d(1000px, 0, 0);
+			opacity: 0;
 			img {
 				margin-top: 50px;
 			}
@@ -68,4 +72,18 @@
 			}
 		}
 	}	
+}
+
+
+//------------------------------------------
+//The state of elements after animation
+.about-company .about-company-container .about-company-container-content-active {
+	transform: translate3d(0, 0, 0);
+	opacity: 1;
+	transition: all 1s ease-out;
+}
+.about-company .about-company-container .about-company-container-illustration-active {
+	transform: translate3d(0, 0, 0);
+	opacity: 1;
+	transition: all 1s ease-out;
 }

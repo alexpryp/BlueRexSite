@@ -1,5 +1,5 @@
 header {
-	background-image: url(../../images/header/headerBgImg.jpg);
+	background-image: url(../../images/header/logo.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -10,6 +10,8 @@ header {
 		display: flex;
 		justify-content: flex-end;
 		min-height: 160px;
+		transform: translate3d(0, -100px, 0);
+		opacity: 0;
 	}
 
 	.logo, .navMenu, .menuWrapper, .gamburgerMenu {
@@ -106,9 +108,10 @@ header {
 		background-image: url(../../images/header/man.png);
 		background-repeat: no-repeat;
 		background-position: bottom right;
+		transform: translate3d(1800px, 0, 0);
+		opacity: 0;
 
 		.head-content {
-			
 			max-width: 750px;
 			h2 {
 				font-size: 3.4rem;
@@ -184,6 +187,7 @@ header {
 }
 
 
+//-----------------------------------------------
 // Media queries
 @media screen and (max-width: 1500px) {
 	header {
@@ -257,4 +261,21 @@ header {
 			justify-content: center;
 		}
 	}
+}
+
+//------------------------------------------
+//The state of elements after animation
+.header-active {
+	background-image: url(../../images/header/headerBgImg.jpg);
+	transition: background-image 1s ease-out;
+}
+.nav-active {
+	transform: translate3d(0, 0, 0);
+	opacity: 1;
+	transition: all 1s ease-out;
+}
+header .head-content-wrapper-active {
+	transform: translate3d(0, 0, 0);
+	opacity: 1;
+	transition: all 1s ease-out;
 }
