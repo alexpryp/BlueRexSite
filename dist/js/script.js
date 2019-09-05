@@ -44,6 +44,20 @@ var nav = document.querySelector("nav");
 var headContentWrapper = document.querySelector(".head-content-wrapper");
 var aboutCompanyContainerContent = document.querySelector(".about-company-container-content");
 var aboutCompanyContainerIllustration = document.querySelector(".about-company-container-illustration");
+var achievsArr = document.querySelectorAll(".achiev");
+var achiev = document.querySelector(".achievCenter");
+var story = document.querySelector(".story-container");
+var ourServicesContainerInfo = document.querySelector(".our-services-container-info");
+var ourServicesContainerVideo = document.querySelector(".our-services-container-video");
+var ourWorkContainerInfoActive = document.querySelector(".our-work-container-info");
+var workImgList = document.querySelectorAll(".work-img");
+var clienList = document.querySelectorAll(".client");
+var testimonial = document.querySelector(".testimonial");
+var clientPhoto = document.querySelector(".client-photo");
+var needHelpContainer = document.querySelector(".need-help-container");
+var socialMLlist = document.querySelectorAll(".socialML-container li");
+var quickLinksLinks = document.querySelector(".quickLinks-container .links");
+var quickLinksPhotos = document.querySelector(".quickLinks-container .photos");
 
 function scrolling(e) {
   if (isPartiallyVisible(header)) {
@@ -65,33 +79,65 @@ function scrolling(e) {
   if (isPartiallyVisible(aboutCompanyContainerIllustration)) {
     aboutCompanyContainerIllustration.classList.add("about-company-container-illustration-active");
   }
-  /*  if (isPartiallyVisible(firstBox)) {
-      firstBox.classList.add("active");
-  
-      document.body.classList.add("colorOne");
-      document.body.classList.remove("colorTwo");
-    } else {
-      document.body.classList.remove("colorOne");
-      document.body.classList.remove("colorTwo");
-    }
-  
-    if (isFullyVisible(secondBox)) {
-      secondBox.classList.add("active");
-  
-      document.body.classList.add("colorTwo");
-      document.body.classList.remove("colorOne");
-    }
-  
-    for (var i = 0; i < listItems.length; i++) {
-      var listItem = listItems[i];
-  
-      if (isPartiallyVisible(listItem)) {
-        listItem.classList.add("active");
-      } else {
-        listItem.classList.remove("active");
-      }
-    }*/
 
+  if (isPartiallyVisible(achievsArr[0]) || isPartiallyVisible(achievsArr[1]) || isPartiallyVisible(achiev)) {
+    achievsArr[0].classList.add("achiev-active");
+    achievsArr[1].classList.add("achiev-active");
+    achiev.classList.add("achiev-active");
+  }
+
+  if (isPartiallyVisible(story)) {
+    story.classList.add("story-container-active");
+  }
+
+  if (isPartiallyVisible(ourServicesContainerInfo)) {
+    ourServicesContainerInfo.classList.add("our-services-container-info-active");
+  }
+
+  if (isPartiallyVisible(ourServicesContainerVideo)) {
+    ourServicesContainerVideo.classList.add("our-services-container-video-active");
+  }
+
+  if (isPartiallyVisible(ourWorkContainerInfoActive)) {
+    ourWorkContainerInfoActive.classList.add("our-work-container-info-active");
+  }
+
+  workImgList.forEach(function (element) {
+    if (isPartiallyVisible(element)) {
+      element.classList.add("work-img-active");
+    }
+  });
+  clienList.forEach(function (element) {
+    if (isPartiallyVisible(element)) {
+      element.classList.add("client-active");
+    }
+  });
+
+  if (isPartiallyVisible(testimonial)) {
+    testimonial.classList.add("testimonial-active");
+  }
+
+  if (isPartiallyVisible(clientPhoto)) {
+    clientPhoto.classList.add("client-photo-active");
+  }
+
+  if (isPartiallyVisible(needHelpContainer)) {
+    needHelpContainer.classList.add("need-help-container-active");
+  }
+
+  socialMLlist.forEach(function (element) {
+    if (isPartiallyVisible(element)) {
+      element.classList.add("socialML-active");
+    }
+  });
+
+  if (isPartiallyVisible(quickLinksLinks)) {
+    quickLinksLinks.classList.add("links-active");
+  }
+
+  if (isPartiallyVisible(quickLinksPhotos)) {
+    quickLinksPhotos.classList.add("photos-active");
+  }
 }
 
 function isPartiallyVisible(el) {

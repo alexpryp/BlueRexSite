@@ -3,7 +3,7 @@
 	justify-content: center;
 	min-height: 440px;
 	background-color: $purpleButton;
-	.our-client-container {
+	&-container {
 		display: flex;
 		flex-wrap: wrap;
 		max-width: $contentContainerMaxWidth;
@@ -13,6 +13,18 @@
 			justify-content: center;
 			align-items: center;
 			padding: 5px;
+			transform: scale3d(0, 0, 0);
+		}
+	}
+}
+
+//------------------------------------------
+//The state of elements after animation
+.our-client {
+	&-container {
+		.client-active {
+			transform: scale3d(1, 1, 1);
+			transition: all 1s ease-out;
 		}
 	}
 }

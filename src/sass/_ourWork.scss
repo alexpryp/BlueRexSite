@@ -13,6 +13,7 @@
 		}
 		&-info {
 			text-align: center;
+			transform: scale3d(0, 0, 0);
 			h2 {
 				font-size: 3rem;
 				margin-top: 60px;
@@ -32,6 +33,7 @@
 				margin: 10px;
 				overflow: hidden;
 				border-radius: 5px;
+				transform: scale3d(0, 0, 0);
 				img {
 					border: 0px solid #fff;
 				}
@@ -47,7 +49,8 @@
 	}
 }
 
-
+//-----------------------------------------------
+// Media queries
 @media screen and (max-width: 400px) {
 	.our-work {
 		&-container {
@@ -60,4 +63,13 @@
 			}
 		}
 	}
+}
+
+//------------------------------------------
+//The state of elements after animation
+
+.our-work .our-work-container .our-work-container-info-active,
+.our-work .our-work-container .our-work-container-works .work-img-active {
+	transform: scale3d(1, 1, 1);
+	transition: all 1s ease-out;
 }

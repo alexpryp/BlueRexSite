@@ -2,15 +2,15 @@
 
 // Gamburger menu animation
 let gamburgMenu = document.querySelector(".gamburgerMenu-wrapper");
-let headerigMenu = document.querySelector(".headerigMenu");
+let navigMenu = document.querySelector(".navigMenu");
 let first = document.querySelector(".first");
 let second = document.querySelector(".second");
 let third = document.querySelector(".third");
 let fourth = document.querySelector(".fourth");
 
 function displayMenu(event) {
-	headerigMenu.classList.toggle("hide-menu");
-	headerigMenu.classList.toggle("show-menu");
+	navigMenu.classList.toggle("hide-menu");
+	navigMenu.classList.toggle("show-menu");
 	first.classList.toggle("first-active");
 	second.classList.toggle("second-active");
 	third.classList.toggle("third-active");
@@ -49,6 +49,20 @@ let nav = document.querySelector("nav");
 let headContentWrapper = document.querySelector(".head-content-wrapper");
 let aboutCompanyContainerContent = document.querySelector(".about-company-container-content");
 let aboutCompanyContainerIllustration = document.querySelector(".about-company-container-illustration");
+let achievsArr = document.querySelectorAll(".achiev");
+let achiev = document.querySelector(".achievCenter");
+let story = document.querySelector(".story-container");
+let ourServicesContainerInfo = document.querySelector(".our-services-container-info");
+let ourServicesContainerVideo = document.querySelector(".our-services-container-video");
+let ourWorkContainerInfoActive = document.querySelector(".our-work-container-info");
+let workImgList = document.querySelectorAll(".work-img");
+let clienList = document.querySelectorAll(".client");
+let testimonial = document.querySelector(".testimonial");
+let clientPhoto = document.querySelector(".client-photo");
+let needHelpContainer = document.querySelector(".need-help-container");
+let socialMLlist = document.querySelectorAll(".socialML-container li");
+let quickLinksLinks = document.querySelector(".quickLinks-container .links");
+let quickLinksPhotos = document.querySelector(".quickLinks-container .photos");
 
 function scrolling(e) {
 	if (isPartiallyVisible(header)) {
@@ -66,36 +80,53 @@ function scrolling(e) {
 	if (isPartiallyVisible(aboutCompanyContainerIllustration)) {
 		aboutCompanyContainerIllustration.classList.add("about-company-container-illustration-active");
 	}
-
-
-
-
-/*  if (isPartiallyVisible(firstBox)) {
-    firstBox.classList.add("active");
-
-    document.body.classList.add("colorOne");
-    document.body.classList.remove("colorTwo");
-  } else {
-    document.body.classList.remove("colorOne");
-    document.body.classList.remove("colorTwo");
-  }
-
-  if (isFullyVisible(secondBox)) {
-    secondBox.classList.add("active");
-
-    document.body.classList.add("colorTwo");
-    document.body.classList.remove("colorOne");
-  }
-
-  for (var i = 0; i < listItems.length; i++) {
-    var listItem = listItems[i];
-
-    if (isPartiallyVisible(listItem)) {
-      listItem.classList.add("active");
-    } else {
-      listItem.classList.remove("active");
-    }
-  }*/
+	if (isPartiallyVisible(achievsArr[0]) || isPartiallyVisible(achievsArr[1]) || isPartiallyVisible(achiev)) {
+		achievsArr[0].classList.add("achiev-active");
+		achievsArr[1].classList.add("achiev-active");
+		achiev.classList.add("achiev-active");
+	}
+	if (isPartiallyVisible(story)) {
+		story.classList.add("story-container-active");
+	}
+	if (isPartiallyVisible(ourServicesContainerInfo)) {
+		ourServicesContainerInfo.classList.add("our-services-container-info-active");
+	}
+	if (isPartiallyVisible(ourServicesContainerVideo)) {
+		ourServicesContainerVideo.classList.add("our-services-container-video-active");
+	}
+	if (isPartiallyVisible(ourWorkContainerInfoActive)) {
+		ourWorkContainerInfoActive.classList.add("our-work-container-info-active");
+	}
+	workImgList.forEach(function(element) {
+		if (isPartiallyVisible(element)) {
+			element.classList.add("work-img-active");
+		}
+	});
+	clienList.forEach(function(element) {
+		if (isPartiallyVisible(element)) {
+			element.classList.add("client-active");
+		}
+	});
+	if (isPartiallyVisible(testimonial)) {
+		testimonial.classList.add("testimonial-active");
+	}
+	if (isPartiallyVisible(clientPhoto)) {
+		clientPhoto.classList.add("client-photo-active");
+	}
+	if (isPartiallyVisible(needHelpContainer)) {
+		needHelpContainer.classList.add("need-help-container-active");
+	}
+	socialMLlist.forEach(function(element) {
+		if (isPartiallyVisible(element)) {
+			element.classList.add("socialML-active");
+		}
+	});
+	if (isPartiallyVisible(quickLinksLinks)) {
+		quickLinksLinks.classList.add("links-active");
+	}
+	if (isPartiallyVisible(quickLinksPhotos)) {
+		quickLinksPhotos.classList.add("photos-active");
+	}
 }
 
 function isPartiallyVisible(el) {

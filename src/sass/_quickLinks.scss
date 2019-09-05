@@ -20,6 +20,7 @@
 			flex-wrap: wrap;
 			align-content: center;
 			flex-basis: 50%;
+			transform: translate3d(-1000px, 0, 0);
 
 			div {
 				flex-basis: 50%;
@@ -48,6 +49,7 @@
 			flex-wrap: wrap;
 			align-content: center;
 			flex-basis: 50%;
+			transform: translate3d(1000px, 0, 0);
 			
 			.photo {
 				margin: 5px;
@@ -65,8 +67,8 @@
 	}
 }
 
-
-
+//-----------------------------------------------
+// Media queries
 @media screen and (max-width: 450px) {
 	.quickLinks {
 		&-container {
@@ -80,4 +82,13 @@
 			}
 		}
 	}
+}
+
+//------------------------------------------
+//The state of elements after animation
+.quickLinks .quickLinks-container .links-active,
+.quickLinks .quickLinks-container .photos-active {
+	transform: translate3d(0, 0, 0);
+	opacity: 1;
+	transition: all 1s ease-out;
 }

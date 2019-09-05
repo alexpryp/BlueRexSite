@@ -12,6 +12,7 @@
 		flex-direction: column;
 		justify-content: center;
 		max-width: $contentContainerMaxWidth;
+		transform: scale3d(0, 0, 0);
 		h2, h3, p {
 			text-align: center;
 		}
@@ -25,4 +26,11 @@
 			font-weight: normal;
 		}
 	}
+}
+
+//------------------------------------------
+//The state of elements after animation
+.story .story-container-active {
+	transform: scale3d(1, 1, 1);
+	transition: all 1s ease-out;
 }

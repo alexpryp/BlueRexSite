@@ -3,7 +3,10 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	position: relative;
+	overflow: hidden;
 	nav {
+		position: relative;
 		max-width: 1800px;
 		margin: 0 auto;
 		padding: 0 100px;
@@ -27,6 +30,7 @@ header {
 
 	}
 	.menuWrapper {
+		position: relative;
 		flex-grow: 1;
 		justify-content: flex-end;
 
@@ -50,9 +54,8 @@ header {
 				padding: 0px;
 				position: absolute;
 				background-color: rgba(0, 0, 0, .5);
-				z-index: 100;
-				overflow: hidden;
 				transition: 0.5s;
+				overflow: hidden;
 
 				a {
 					text-align: center;
@@ -138,15 +141,16 @@ header {
 
 
 
-.hide-menu {
+header .menuWrapper .gamburgerMenu .hide-menu {
 	height: 0;
 	font-size: 0px;
 }
 
-.show-menu {
+header .menuWrapper .gamburgerMenu .show-menu {
 	height: 390px;
 	font-size: 1.45rem;
 	transform: translateX(0%);
+	position: absolute;
 }
 
 .burger-line {
@@ -263,6 +267,36 @@ header {
 	}
 }
 
+
+@media screen and (max-width: 420px) {
+	header {
+		.head-content-wrapper {
+			.head-content {
+				h2 {
+					font-size: 2.5rem;
+					line-height: 2.7rem;
+					font-family: serif;
+					font-style: italic;
+					font-weight: normal;
+				}
+				h1 {
+					font-size: 3rem;
+					font-weight: normal;
+				}
+				p {
+					font-size: 1.5rem;
+					line-height: 2.5rem;
+				}
+				&-buttons {
+					display: flex;
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
+
+
 //------------------------------------------
 //The state of elements after animation
 .header-active {
@@ -273,9 +307,11 @@ header {
 	transform: translate3d(0, 0, 0);
 	opacity: 1;
 	transition: all 1s ease-out;
+	z-index: 10;
 }
 header .head-content-wrapper-active {
 	transform: translate3d(0, 0, 0);
 	opacity: 1;
 	transition: all 1s ease-out;
+	z-index: -10;
 }

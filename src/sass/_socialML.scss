@@ -17,6 +17,7 @@
 			li {
 				margin: 20px;
 				font-size: 1.3rem;
+				transform: scale3d(0, 0, 0);
 
 				a {
 					display: block;
@@ -36,4 +37,11 @@
 			}
 		}
 	}
+}
+
+//------------------------------------------
+//The state of elements after animation
+.socialML .socialML-container ul li.socialML-active {
+	transform: scale3d(1, 1, 1);
+	transition: all 1s ease-out;
 }

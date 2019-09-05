@@ -16,6 +16,7 @@
 			flex-grow: 1;
 			padding: 10px;
 			text-align: center;
+			transform: scale3d(0, 0, 0);
 			.image {
 			}
 			.val {
@@ -38,6 +39,8 @@
 	}
 }
 
+//-----------------------------------------------
+// Media queries
 @media screen and (max-width: 768px) {
 	.our-achievement {
 		&-container {
@@ -45,3 +48,10 @@
 		}
 	}
 }
+
+//------------------------------------------
+//The state of elements after animation
+.our-achievement .our-achievement-container .achiev-active{
+	transform: scale3d(1, 1, 1);
+	transition: all 1s ease-out;
+} 

@@ -11,15 +11,18 @@
 		max-width: $contentContainerMaxWidth;
 		display: flex;
 		justify-content: center;
+		overflow: hidden;
 
 		.testimonial, .client-photo {
 			flex-basis: 50%;
+			opacity: 0;
 		}
 
 		.testimonial {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			transform: translate3d(-1000px, 0, 0);
 			
 			h3 {
 				font-size: 2.5rem;
@@ -70,15 +73,13 @@
 			display: flex;
 			align-items: flex-end;
 			justify-content: center;
-
-			&-container {
-
-			}
+			transform: translate3d(1000px, 0, 0);
 		}
 	}
 }
 
-
+//-----------------------------------------------
+// Media queries
 @media screen and (max-width: 768px) {
 	.testimonials {
 		&-container {
@@ -98,6 +99,18 @@
 					width: 200px;
 				}
 			}
+		}
+	}
+}
+
+//------------------------------------------
+//The state of elements after animation
+.testimonials {
+	&-container {
+		.testimonial-active, .client-photo-active {
+			transform: translate3d(0, 0, 0);
+			opacity: 1;
+			transition: all 1s ease-out;
 		}
 	}
 }

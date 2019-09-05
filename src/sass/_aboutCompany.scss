@@ -10,6 +10,7 @@
 		justify-content: center;
 		margin: auto;
 		max-width: $contentContainerMaxWidth;
+		overflow: hidden;
 		&-content {
 			flex-grow: 1;
 			padding: 5px;
@@ -45,7 +46,8 @@
 	}
 }
 
-
+//-----------------------------------------------
+// Media queries
 @media screen and (max-width: 1000px) {
 	.about-company {
 		&-container {
@@ -77,12 +79,8 @@
 
 //------------------------------------------
 //The state of elements after animation
-.about-company .about-company-container .about-company-container-content-active {
-	transform: translate3d(0, 0, 0);
-	opacity: 1;
-	transition: all 1s ease-out;
-}
-.about-company .about-company-container .about-company-container-illustration-active {
+.about-company .about-company-container .about-company-container-content-active, 
+.about-company .about-company-container .about-company-container-illustration-active{
 	transform: translate3d(0, 0, 0);
 	opacity: 1;
 	transition: all 1s ease-out;
