@@ -13,6 +13,8 @@
 		align-items: center;
 		max-width: $contentContainerMaxWidth;
 		align-items: stretch;
+		overflow: hidden;
+
 
 		.links {
 			display: flex;
