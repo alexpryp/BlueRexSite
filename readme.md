@@ -8,7 +8,7 @@ This landing page is compliant with w3c standards, is responsive, and contains a
 
 The following technologies were used to create this page:
 * HTML5
-* CSS3
+* CSS3, Flexbox
 * SASS
 * JavaScript
 * Gulp, Autoprefixer, Babel, CSSmin

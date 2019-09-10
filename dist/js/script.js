@@ -19,26 +19,6 @@ function displayMenu(event) {
 gamburgMenu.addEventListener("click", displayMenu); //---------------------------------------------------------------------------
 //Page component animation
 
-var isScrolling = false;
-window.addEventListener("scroll", throttleScroll, false); //Defining the wrapper function of the page handler 'throttleScroll' 
-//that launches the page scroll handler 'scrolling'. 
-//using the window.requestAnimationFrame method, we set the handler 'scrolling' call 
-//on the next frame of the animation. This means that the current event handler 
-//will be called about 60 times per second, which is a valid value when working 
-//with DOM structures of various kinds.
-
-function throttleScroll(e) {
-  if (isScrolling == false) {
-    window.requestAnimationFrame(function () {
-      scrolling(e);
-      isScrolling = false;
-    });
-  }
-
-  isScrolling = true;
-}
-
-document.addEventListener("DOMContentLoaded", scrolling, false);
 var header = document.querySelector("header");
 var nav = document.querySelector("nav");
 var headContentWrapper = document.querySelector(".head-content-wrapper");
@@ -58,6 +38,42 @@ var needHelpContainer = document.querySelector(".need-help-container");
 var socialMLlist = document.querySelectorAll(".socialML-container li");
 var quickLinksLinks = document.querySelector(".quickLinks-container .links");
 var quickLinksPhotos = document.querySelector(".quickLinks-container .photos");
+var isScrolling = false;
+
+function isPartiallyVisible(el) {
+  var elementBoundary = el.getBoundingClientRect();
+  var top = elementBoundary.top;
+  var bottom = elementBoundary.bottom;
+  var height = elementBoundary.height;
+  return top + height >= 0 && height + window.innerHeight >= bottom;
+}
+
+function isFullyVisible(el) {
+  var elementBoundary = el.getBoundingClientRect();
+  var top = elementBoundary.top;
+  var bottom = elementBoundary.bottom;
+  return top >= 0 && bottom <= window.innerHeight;
+} //Defining the wrapper function of the page handler 'throttleScroll' 
+//that launches the page scroll handler 'scrolling'. 
+//using the window.requestAnimationFrame method, we set the handler 'scrolling' call 
+//on the next frame of the animation. This means that the current event handler 
+//will be called about 60 times per second, which is a valid value when working 
+//with DOM structures of various kinds.
+
+
+function throttleScroll(e) {
+  if (isScrolling == false) {
+    window.requestAnimationFrame(function () {
+      scrolling(e);
+      isScrolling = false;
+    });
+  }
+
+  isScrolling = true;
+}
+
+window.addEventListener("scroll", throttleScroll, false);
+document.addEventListener("DOMContentLoaded", scrolling, false);
 
 function scrolling(e) {
   if (isPartiallyVisible(header)) {
@@ -138,19 +154,4 @@ function scrolling(e) {
   if (isPartiallyVisible(quickLinksPhotos)) {
     quickLinksPhotos.classList.add("photos-active");
   }
-}
-
-function isPartiallyVisible(el) {
-  var elementBoundary = el.getBoundingClientRect();
-  var top = elementBoundary.top;
-  var bottom = elementBoundary.bottom;
-  var height = elementBoundary.height;
-  return top + height >= 0 && height + window.innerHeight >= bottom;
-}
-
-function isFullyVisible(el) {
-  var elementBoundary = el.getBoundingClientRect();
-  var top = elementBoundary.top;
-  var bottom = elementBoundary.bottom;
-  return top >= 0 && bottom <= window.innerHeight;
 }

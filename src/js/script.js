@@ -1,12 +1,12 @@
 "use strict"
 
 // Gamburger menu animation
-let gamburgMenu = document.querySelector(".gamburgerMenu-wrapper");
-let navigMenu = document.querySelector(".navigMenu");
-let first = document.querySelector(".first");
-let second = document.querySelector(".second");
-let third = document.querySelector(".third");
-let fourth = document.querySelector(".fourth");
+const gamburgMenu = document.querySelector(".gamburgerMenu-wrapper");
+const navigMenu = document.querySelector(".navigMenu");
+const first = document.querySelector(".first");
+const second = document.querySelector(".second");
+const third = document.querySelector(".third");
+const fourth = document.querySelector(".fourth");
 
 function displayMenu(event) {
 	navigMenu.classList.toggle("hide-menu");
@@ -21,9 +21,46 @@ gamburgMenu.addEventListener("click", displayMenu);
 
 //---------------------------------------------------------------------------
 //Page component animation
+const header = document.querySelector("header");
+const nav = document.querySelector("nav");
+const headContentWrapper = document.querySelector(".head-content-wrapper");
+const aboutCompanyContainerContent = document.querySelector(".about-company-container-content");
+const aboutCompanyContainerIllustration = document.querySelector(".about-company-container-illustration");
+const achievsArr = document.querySelectorAll(".achiev");
+const achiev = document.querySelector(".achievCenter");
+const story = document.querySelector(".story-container");
+const ourServicesContainerInfo = document.querySelector(".our-services-container-info");
+const ourServicesContainerVideo = document.querySelector(".our-services-container-video");
+const ourWorkContainerInfoActive = document.querySelector(".our-work-container-info");
+const workImgList = document.querySelectorAll(".work-img");
+const clienList = document.querySelectorAll(".client");
+const testimonial = document.querySelector(".testimonial");
+const clientPhoto = document.querySelector(".client-photo");
+const needHelpContainer = document.querySelector(".need-help-container");
+const socialMLlist = document.querySelectorAll(".socialML-container li");
+const quickLinksLinks = document.querySelector(".quickLinks-container .links");
+const quickLinksPhotos = document.querySelector(".quickLinks-container .photos");
+
 let isScrolling = false;
 
-window.addEventListener("scroll", throttleScroll, false);
+function isPartiallyVisible(el) {
+  let elementBoundary = el.getBoundingClientRect();
+
+  let top = elementBoundary.top;
+  let bottom = elementBoundary.bottom;
+  let height = elementBoundary.height;
+
+  return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+}
+
+function isFullyVisible(el) {
+  let elementBoundary = el.getBoundingClientRect();
+
+  let top = elementBoundary.top;
+  let bottom = elementBoundary.bottom;
+
+  return ((top >= 0) && (bottom <= window.innerHeight));
+}
 
 //Defining the wrapper function of the page handler 'throttleScroll' 
 //that launches the page scroll handler 'scrolling'. 
@@ -41,28 +78,8 @@ function throttleScroll(e) {
   isScrolling = true;
 }
 
+window.addEventListener("scroll", throttleScroll, false);
 document.addEventListener("DOMContentLoaded", scrolling, false);
-
-
-let header = document.querySelector("header");
-let nav = document.querySelector("nav");
-let headContentWrapper = document.querySelector(".head-content-wrapper");
-let aboutCompanyContainerContent = document.querySelector(".about-company-container-content");
-let aboutCompanyContainerIllustration = document.querySelector(".about-company-container-illustration");
-let achievsArr = document.querySelectorAll(".achiev");
-let achiev = document.querySelector(".achievCenter");
-let story = document.querySelector(".story-container");
-let ourServicesContainerInfo = document.querySelector(".our-services-container-info");
-let ourServicesContainerVideo = document.querySelector(".our-services-container-video");
-let ourWorkContainerInfoActive = document.querySelector(".our-work-container-info");
-let workImgList = document.querySelectorAll(".work-img");
-let clienList = document.querySelectorAll(".client");
-let testimonial = document.querySelector(".testimonial");
-let clientPhoto = document.querySelector(".client-photo");
-let needHelpContainer = document.querySelector(".need-help-container");
-let socialMLlist = document.querySelectorAll(".socialML-container li");
-let quickLinksLinks = document.querySelector(".quickLinks-container .links");
-let quickLinksPhotos = document.querySelector(".quickLinks-container .photos");
 
 function scrolling(e) {
 	if (isPartiallyVisible(header)) {
@@ -127,23 +144,4 @@ function scrolling(e) {
 	if (isPartiallyVisible(quickLinksPhotos)) {
 		quickLinksPhotos.classList.add("photos-active");
 	}
-}
-
-function isPartiallyVisible(el) {
-  var elementBoundary = el.getBoundingClientRect();
-
-  var top = elementBoundary.top;
-  var bottom = elementBoundary.bottom;
-  var height = elementBoundary.height;
-
-  return ((top + height >= 0) && (height + window.innerHeight >= bottom));
-}
-
-function isFullyVisible(el) {
-  var elementBoundary = el.getBoundingClientRect();
-
-  var top = elementBoundary.top;
-  var bottom = elementBoundary.bottom;
-
-  return ((top >= 0) && (bottom <= window.innerHeight));
 }
