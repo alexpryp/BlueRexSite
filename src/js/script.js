@@ -43,6 +43,9 @@ const quickLinksPhotos = document.querySelector(".quickLinks-container .photos")
 
 let isScrolling = false;
 
+window.addEventListener("scroll", throttleScroll, false);
+document.addEventListener("DOMContentLoaded", scrolling, false);
+
 function isPartiallyVisible(el) {
   let elementBoundary = el.getBoundingClientRect();
 
@@ -77,9 +80,6 @@ function throttleScroll(e) {
   }
   isScrolling = true;
 }
-
-window.addEventListener("scroll", throttleScroll, false);
-document.addEventListener("DOMContentLoaded", scrolling, false);
 
 function scrolling(e) {
 	if (isPartiallyVisible(header)) {
