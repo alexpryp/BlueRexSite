@@ -1,6 +1,7 @@
 "use strict"; // Gamburger menu animation
 
 var gamburgMenu = document.querySelector(".gamburgerMenu-wrapper");
+var ganburgerMenuNavig = document.querySelector(".navigMenu");
 var navigMenu = document.querySelector(".navigMenu");
 var first = document.querySelector(".first");
 var second = document.querySelector(".second");
@@ -8,15 +9,16 @@ var third = document.querySelector(".third");
 var fourth = document.querySelector(".fourth");
 
 function displayMenu(event) {
-  navigMenu.classList.toggle("hide-menu");
-  navigMenu.classList.toggle("show-menu");
+  navigMenu.classList.toggle("hide-menu"); //navigMenu.classList.toggle("show-menu");
+
   first.classList.toggle("first-active");
   second.classList.toggle("second-active");
   third.classList.toggle("third-active");
   fourth.classList.toggle("fourth-active");
 }
 
-gamburgMenu.addEventListener("click", displayMenu); //---------------------------------------------------------------------------
+gamburgMenu.addEventListener("click", displayMenu);
+ganburgerMenuNavig.addEventListener("click", displayMenu); //---------------------------------------------------------------------------
 //Page component animation
 
 var header = document.querySelector("header");
@@ -39,6 +41,8 @@ var socialMLlist = document.querySelectorAll(".socialML-container li");
 var quickLinksLinks = document.querySelector(".quickLinks-container .links");
 var quickLinksPhotos = document.querySelector(".quickLinks-container .photos");
 var isScrolling = false;
+window.addEventListener("scroll", throttleScroll, false);
+document.addEventListener("DOMContentLoaded", scrolling, false);
 
 function isPartiallyVisible(el) {
   var elementBoundary = el.getBoundingClientRect();
@@ -71,9 +75,6 @@ function throttleScroll(e) {
 
   isScrolling = true;
 }
-
-window.addEventListener("scroll", throttleScroll, false);
-document.addEventListener("DOMContentLoaded", scrolling, false);
 
 function scrolling(e) {
   if (isPartiallyVisible(header)) {

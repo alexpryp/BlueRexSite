@@ -49,6 +49,25 @@
 	}
 }
 
+@media screen and (max-width: 450px) {
+	.our-achievement {
+		&-container {
+			.achiev, .achievCenter {
+				img {
+					height: 60px;
+				}
+				.val {
+					font-size: 3rem;
+				}
+				.achiev-name {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
+
+
 //------------------------------------------
 //The state of elements after animation
 .our-achievement .our-achievement-container .achiev-active{

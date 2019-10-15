@@ -134,6 +134,7 @@ header {
 			&-buttons {
 				display: flex;
 				justify-content: center;
+				flex-wrap: wrap;
 			}
 		}
 	}
@@ -167,7 +168,8 @@ header .menuWrapper .gamburgerMenu .show-menu {
 }
 
 .first-active {
-	display: none;
+	top: 18px;
+	transform: rotate(45deg);
 }
 
 .second, .third {
@@ -187,7 +189,8 @@ header .menuWrapper .gamburgerMenu .show-menu {
 }
 
 .fourth-active {
-	display: none;
+	top: 18px;
+	transform: rotate(-45deg);
 }
 
 
@@ -228,6 +231,10 @@ header .menuWrapper .gamburgerMenu .show-menu {
 			display: flex;
 			justify-content: flex-end;
 			min-height: 160px;
+		}
+		.name-company {
+			font-size: 2rem;
+			line-height: 2.2rem;
 		}
 
 		.head-content-wrapper {
@@ -270,22 +277,28 @@ header .menuWrapper .gamburgerMenu .show-menu {
 
 @media screen and (max-width: 420px) {
 	header {
+		.logo {
+			img {
+				height: 50px;			
+			}
+
+		}
 		.head-content-wrapper {
 			.head-content {
 				h2 {
-					font-size: 2.5rem;
-					line-height: 2.7rem;
+					font-size: 2rem;
+					line-height: 2.2rem;
 					font-family: serif;
 					font-style: italic;
 					font-weight: normal;
 				}
 				h1 {
-					font-size: 3rem;
+					font-size: 2.5rem;
 					font-weight: normal;
 				}
 				p {
-					font-size: 1.5rem;
-					line-height: 2.5rem;
+					font-size: 1rem;
+					line-height: 2rem;
 				}
 				&-buttons {
 					display: flex;

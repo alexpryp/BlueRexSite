@@ -2,6 +2,7 @@
 
 // Gamburger menu animation
 const gamburgMenu = document.querySelector(".gamburgerMenu-wrapper");
+const ganburgerMenuNavig = document.querySelector(".navigMenu");
 const navigMenu = document.querySelector(".navigMenu");
 const first = document.querySelector(".first");
 const second = document.querySelector(".second");
@@ -10,7 +11,7 @@ const fourth = document.querySelector(".fourth");
 
 function displayMenu(event) {
 	navigMenu.classList.toggle("hide-menu");
-	navigMenu.classList.toggle("show-menu");
+	//navigMenu.classList.toggle("show-menu");
 	first.classList.toggle("first-active");
 	second.classList.toggle("second-active");
 	third.classList.toggle("third-active");
@@ -18,6 +19,7 @@ function displayMenu(event) {
 }
 
 gamburgMenu.addEventListener("click", displayMenu);
+ganburgerMenuNavig.addEventListener("click", displayMenu);
 
 //---------------------------------------------------------------------------
 //Page component animation

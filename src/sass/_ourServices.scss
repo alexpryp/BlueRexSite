@@ -110,6 +110,29 @@
 	}
 }
 
+@media screen and (max-width: 450px) {
+	.our-services {
+		&-container {
+			&-info {
+				h3 {
+					font-size: 1.5rem;
+				}
+				h2 {
+					font-size: 2rem;
+				}
+				p {
+					font-size: 1rem;
+				}
+				.design-directions {
+					.desHead {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+}
+
 //------------------------------------------
 //The state of elements after animation
 .our-services .our-services-container .our-services-container-info-active, 

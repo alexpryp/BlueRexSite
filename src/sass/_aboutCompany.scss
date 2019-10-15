@@ -69,8 +69,16 @@
 @media screen and (max-width: 450px) {
 	.about-company {
 		&-container {
-			&-illustration {
-				display: none;
+			&-illustration img {
+				height: 300px;
+			}
+			&-content {
+				h3 {
+					font-size: 1.76rem;
+				}
+				h2 {
+					font-size: 2.17rem;
+				}
 			}
 		}
 	}	
